@@ -23,6 +23,8 @@ h1 span{display:block;font-size:28px;margin-top:6px}
 .cta{display:block;text-align:center;background:var(--dark);color:var(--amber);text-decoration:none;font-family:'Alexandria';font-weight:800;font-size:24px;padding:20px;border-radius:999px;box-shadow:0 6px 0 rgba(0,0,0,.18)}
 .cta:active{transform:translateY(3px);box-shadow:0 3px 0 rgba(0,0,0,.18)}
 .note{text-align:center;font-size:14px;opacity:.8}
+.alt{text-align:center;font-size:15px;line-height:1.7}
+.alt a{color:var(--dark);font-family:'Alexandria';font-weight:800;font-size:20px;text-decoration:underline}
 footer{text-align:center;font-size:12px;opacity:.7;margin-top:auto}
 </style>
 </head>
@@ -37,13 +39,27 @@ footer{text-align:center;font-size:12px;opacity:.7;margin-top:auto}
   </div>
   <a id="go" class="cta" href="https://wa.me/966533527004">اطلب سعرك الحين</a>
   <p class="note">الطلب مجاني وبدون التزام</p>
+  <p class="alt">ما فتح معك الواتساب؟ راسلنا أو اتصل على<br><a id="tel" href="tel:+966533527004" dir="ltr">053 352 7004</a></p>
   <footer>غيار — خدمة توفير قطع غيار السيارات في الرياض</footer>
 </main>
 <script>
+(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function(){a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};a.queue=[];var s='script';var r=t.createElement(s);r.async=!0;r.src=n;var u=t.getElementsByTagName(s)[0];u.parentNode.insertBefore(r,u);})(window,document,'https://sc-static.net/scevent.min.js');
+snaptr('init','29574287-5bf3-494f-b858-a78b48e69589',{});
+snaptr('track','PAGE_VIEW');
 (function(){
   var c=(new URLSearchParams(location.search).get('c')||'SNAP').replace(/[^A-Za-z0-9]/g,'').slice(0,8)||'SNAP';
   var t='السلام عليكم، أبغى قطعة لسيارتي ['+c+']';
-  document.getElementById('go').href='https://wa.me/966533527004?text='+encodeURIComponent(t);
+  var url='https://wa.me/966533527004?text='+encodeURIComponent(t);
+  var go=document.getElementById('go');
+  go.href=url;
+  go.addEventListener('click',function(ev){
+    ev.preventDefault();
+    try{snaptr('track','SIGN_UP',{sign_up_method:'whatsapp_'+c});}catch(x){}
+    setTimeout(function(){location.href=url;},300);
+  });
+  document.getElementById('tel').addEventListener('click',function(){
+    try{snaptr('track','CUSTOM_EVENT_1',{description:'call_'+c});}catch(x){}
+  });
 })();
 </script>
 </body>
