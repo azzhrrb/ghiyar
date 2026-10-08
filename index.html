@@ -2,46 +2,144 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>غيار | قطع غيار سيارتك بأفضل سعر</title>
-<meta name="description" content="غيار: قطع غيار سيارتك بأفضل سعر في الرياض. أرسل طلبك ويجيك السعر خلال ساعتين.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>غيار | قطع غيار السيارات في الرياض</title>
+<meta name="description" content="غيار: نوفّر قطع غيار سيارتك بسعر أقل من السوق. أرسل طلبك ويصلك عرض السعر خلال ساعتين، والتوصيل مجاني داخل الرياض.">
+<meta name="theme-color" content="#0F1B2A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@700;800&family=IBM+Plex+Sans+Arabic:wght@500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--amber:#F2A900;--dark:#14202B;--cream:#FFF8E6}
+:root{
+  --ink:#0F1B2A;--ink-2:#3B4757;--muted:#6B7685;--line:#E4E7EC;
+  --bg:#FFFFFF;--soft:#F5F7FA;--brand:#F2A900;--brand-ink:#5A3F00;--ok:#127A4B;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--amber);color:var(--dark);font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;min-height:100vh;display:flex;justify-content:center}
-main{width:100%;max-width:440px;padding:28px 20px 32px;display:flex;flex-direction:column;gap:22px}
-.brand{display:flex;align-items:center;gap:10px;font-family:'Alexandria';font-weight:800;font-size:26px}
-.logo{width:40px;height:40px;background:var(--dark);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);display:grid;place-items:center;color:var(--amber);font-size:22px}
-h1{font-family:'Alexandria';font-weight:800;font-size:40px;line-height:1.25}
-h1 span{display:block;font-size:28px;margin-top:6px}
-.card{background:var(--cream);border-radius:20px;padding:18px 18px 8px}
-.step{display:flex;gap:12px;align-items:center;padding-bottom:14px}
-.n{flex:0 0 34px;height:34px;border-radius:50%;background:var(--dark);color:var(--amber);font-family:'Alexandria';font-weight:800;display:grid;place-items:center}
-.step b{font-weight:600;font-size:18px;line-height:1.5}
-.cta{display:block;text-align:center;background:var(--dark);color:var(--amber);text-decoration:none;font-family:'Alexandria';font-weight:800;font-size:24px;padding:20px;border-radius:999px;box-shadow:0 6px 0 rgba(0,0,0,.18)}
-.cta:active{transform:translateY(3px);box-shadow:0 3px 0 rgba(0,0,0,.18)}
-.note{text-align:center;font-size:14px;opacity:.8}
-.alt{text-align:center;font-size:15px;line-height:1.7}
-.alt a{color:var(--dark);font-family:'Alexandria';font-weight:800;font-size:20px;text-decoration:underline}
-footer{text-align:center;font-size:12px;opacity:.7;margin-top:auto}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'IBM Plex Sans Arabic',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding-bottom:92px}
+a{color:inherit}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+
+/* header */
+header{border-bottom:1px solid var(--line);background:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mark{width:34px;height:34px;border-radius:8px;background:var(--ink);display:grid;place-items:center}
+.mark span{display:block;width:14px;height:14px;border:3px solid var(--brand);border-radius:50%}
+.word{font-weight:700;font-size:22px;letter-spacing:0}
+.city{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+
+/* hero */
+.hero{padding:36px 0 28px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--brand-ink);background:#FFF4D6;border:1px solid #F6DE9C;padding:4px 10px;border-radius:999px;margin-bottom:16px}
+h1{font-size:32px;line-height:1.3;font-weight:700;margin-bottom:12px}
+.lead{font-size:17px;color:var(--ink-2);margin-bottom:24px}
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:18px;padding:16px 20px;border-radius:12px;transition:background .15s}
+.cta:hover{background:#1C2B3E}
+.cta:active{transform:translateY(1px)}
+.cta svg{width:22px;height:22px;flex:none}
+.sub{margin-top:12px;font-size:14px;color:var(--muted);text-align:center}
+.sub a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1px solid var(--line)}
+
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding-bottom:32px}
+.t{border:1px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center}
+.t svg{width:24px;height:24px;color:var(--ink);margin-bottom:6px}
+.t b{display:block;font-size:14px;font-weight:600;line-height:1.4}
+
+/* sections */
+section.block{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:32px 0}
+h2{font-size:20px;font-weight:700;margin-bottom:18px}
+ol.steps{list-style:none;display:grid;gap:12px}
+ol.steps li{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font-weight:600;font-size:15px;display:grid;place-items:center}
+ol.steps p{font-size:16px;font-weight:500;padding-top:2px}
+.need{padding:32px 0}
+.need ul{list-style:none;display:grid;gap:10px}
+.need li{display:flex;gap:10px;align-items:center;font-size:15px;color:var(--ink-2)}
+.need li svg{width:18px;height:18px;color:var(--ok);flex:none}
+.note{margin-top:14px;font-size:13px;color:var(--muted)}
+
+footer{border-top:1px solid var(--line);padding:24px 0 8px;font-size:13px;color:var(--muted)}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+
+/* sticky mobile CTA */
+.sticky{position:fixed;inset:auto 0 0 0;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:12px 20px calc(12px + env(safe-area-inset-bottom))}
+.sticky .cta{max-width:520px;margin:0 auto}
+@media (min-width:720px){h1{font-size:38px}.hero{padding-top:56px}}
 </style>
 </head>
 <body>
-<main>
-  <div class="brand"><div class="logo">‹</div>غيار</div>
-  <h1>قطع غيار سيارتك بأفضل سعر<span>والسعر يجيك خلال ساعتين</span></h1>
-  <div class="card">
-    <div class="step"><div class="n">١</div><b>ارسل لنا وش القطعة اللي تبيها</b></div>
-    <div class="step"><div class="n">٢</div><b>نجيب لك القطعة بأسرع وقت وأفضل من سعر السوق</b></div>
-    <div class="step"><div class="n">٣</div><b>إذا ناسبك تدفع، والتوصيل مجاني</b></div>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#" aria-label="غيار">
+      <span class="mark" aria-hidden="true"><span></span></span>
+      <span class="word">غيار</span>
+    </a>
+    <span class="city"><span class="dot" aria-hidden="true"></span>الرياض · نستقبل الطلبات ٨ص–٨م</span>
   </div>
-  <a id="go" class="cta" href="https://wa.me/966533527004">اطلب سعرك الحين</a>
-  <p class="note">الطلب مجاني وبدون التزام</p>
-  <p class="alt">ما فتح معك الواتساب؟ راسلنا أو اتصل على<br><a id="tel" href="tel:+966533527004" dir="ltr">053 352 7004</a></p>
-  <footer>غيار — خدمة توفير قطع غيار السيارات في الرياض</footer>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <span class="eyebrow">قطع غيار السيارات</span>
+    <h1>قطع غيار سيارتك بسعر أقل من السوق</h1>
+    <p class="lead">أرسل لنا القطعة اللي تحتاجها، ويوصلك عرض السعر خلال ساعتين.</p>
+    <a id="go" class="cta" href="https://wa.me/966533527004">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z"/></svg>
+      اطلب سعرك عبر المحادثة
+    </a>
+    <p class="sub">أو اتصل مباشرة: <a id="tel" href="tel:+966533527004" dir="ltr">053 352 7004</a></p>
+  </div>
+
+  <div class="wrap trust" aria-label="مميزات الخدمة">
+    <div class="t">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <b>عرض السعر خلال ساعتين</b>
+    </div>
+    <div class="t">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
+      <b>أقل من سعر السوق</b>
+    </div>
+    <div class="t">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>
+      <b>توصيل مجاني داخل الرياض</b>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <h2>كيف تطلب</h2>
+      <ol class="steps">
+        <li><span class="n">١</span><p>ارسل لنا وش القطعة اللي تبيها</p></li>
+        <li><span class="n">٢</span><p>نجيب لك القطعة بأسرع وقت وأفضل من سعر السوق</p></li>
+        <li><span class="n">٣</span><p>إذا ناسبك تدفع، والتوصيل مجاني</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="wrap need">
+    <h2>عشان نسعّر لك بدقة</h2>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>نوع السيارة والموديل والسنة</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>اسم القطعة أو صورة لها</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>رقم الهيكل إن توفّر (يساعدنا نضمن القطعة الصحيحة)</li>
+    </ul>
+    <p class="note">الطلب مجاني وبدون أي التزام — تدفع فقط إذا ناسبك السعر.</p>
+  </div>
 </main>
+
+<footer>
+  <div class="wrap row">
+    <span>© غيار — خدمة توفير قطع غيار السيارات</span>
+    <span>الرياض، المملكة العربية السعودية</span>
+  </div>
+</footer>
+
+<div class="sticky"><a id="go2" class="cta" href="https://wa.me/966533527004">اطلب سعرك الحين</a></div>
+
 <script>
 (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function(){a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};a.queue=[];var s='script';var r=t.createElement(s);r.async=!0;r.src=n;var u=t.getElementsByTagName(s)[0];u.parentNode.insertBefore(r,u);})(window,document,'https://sc-static.net/scevent.min.js');
 snaptr('init','29574287-5bf3-494f-b858-a78b48e69589',{});
@@ -50,12 +148,13 @@ snaptr('track','PAGE_VIEW');
   var c=(new URLSearchParams(location.search).get('c')||'SNAP').replace(/[^A-Za-z0-9]/g,'').slice(0,8)||'SNAP';
   var t='السلام عليكم، أبغى قطعة لسيارتي ['+c+']';
   var url='https://wa.me/966533527004?text='+encodeURIComponent(t);
-  var go=document.getElementById('go');
-  go.href=url;
-  go.addEventListener('click',function(ev){
-    ev.preventDefault();
-    try{snaptr('track','SIGN_UP',{sign_up_method:'whatsapp_'+c});}catch(x){}
-    setTimeout(function(){location.href=url;},300);
+  ['go','go2'].forEach(function(id){
+    var el=document.getElementById(id); el.href=url;
+    el.addEventListener('click',function(ev){
+      ev.preventDefault();
+      try{snaptr('track','SIGN_UP',{sign_up_method:'whatsapp_'+c});}catch(x){}
+      setTimeout(function(){location.href=url;},300);
+    });
   });
   document.getElementById('tel').addEventListener('click',function(){
     try{snaptr('track','CUSTOM_EVENT_1',{description:'call_'+c});}catch(x){}
